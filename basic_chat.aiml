@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+
+<meta name="language" content="en"/>
+
+<category>
+	<pattern>HELLO</pattern>
+	<template>
+	<random>
+		<li>Hello there!</li>
+		<li>Hey, you!</li>
+		<li>Hi, Nice to see you!</li>
+	</random>
+	</template>
+</category>
+
+<category>
+    <pattern>HELLO *</pattern>
+    <template>
+		<srai>HELLO</srai>
+	</template>
+</category>
+    
+<category>
+    <pattern>WHO ARE YOU</pattern>
+    <template>I am Jarvis!</template>
+</category>
+
+<category>
+	<pattern>WHO CREATED YOU</pattern>
+	<template>I was created by Vaani</template>
+</category>
+
+<category>
+        <pattern>REPEAT *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+   <category>
+        <pattern>REPEAT AFTER ME *</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+	<category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm Jarvis. I'm a simple and fundamental desktop assistant/chatbot created by Vani Agarwal.
+        </template>
+    </category>
+
+	<category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>
+            I am fine, sir.
+        </template>
+    </category>
+
+	<category>
+        <pattern>BATTERY LEVEL</pattern>
+        <template>
+            battery <system>WMIC PATH Win32_Battery Get EstimatedChargeRemaining</system>
+        </template>
+    </category>
+
+	<category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+           <li>I am sorry, I don't quite understand</li>
+           <li>I don't understand that yet. Maybe you could teach me.</li>
+           <li>I don't know how to answer that. Maybe I could interest you in something else.</li>
+        </random>
+    </template>
+    </category>
+
+
+
+
+</aiml>
