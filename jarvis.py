@@ -68,29 +68,16 @@ if __name__ == "__main__":
             print(results)
             speak(results)
 
-         
-
-        elif 'play music' in query:
-            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
-            songs = os.listdir(music_dir)
-            print(songs)    
-            os.startfile(os.path.join(music_dir, songs[0]))
-
         elif 'time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
             speak(f"Sir, the time is {strTime}")
-
-        elif 'open file' in query:
-            Path = "C:\\Windows\\explorer"
-            os.startfile(Path)
 
         elif any([i for i in terminate if i in query]):
             s="Bye, Have a nice day."
             print(s)
             speak(s)
             exit(0)
-
-        
+     
         else:
             if os.path.isfile("brain.dump"):
                 print("i have learnt")

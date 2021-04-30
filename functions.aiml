@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+
+<meta name="language" content="en"/>
+
+<category>
+    <pattern>OPEN *</pattern>
+    <template>
+        opening<star/><system>start <star/></system>
+    </template>
+</category>
+
+<category>
+    <pattern>PLAY *</pattern>
+    <template>
+        Playing <star/>
+       <system> start chrome "<system> python youtube_search.py "<star/>"</system>"</system>
+    </template>
+</category>
+
+
+</aiml>
+
